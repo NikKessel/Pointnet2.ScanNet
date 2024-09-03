@@ -16,3 +16,6 @@ preprocessing/label_point_clouds/
 # outputs
 outputs/
 logs/
+*.jpg
+*.png
+*.txt
