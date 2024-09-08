@@ -4,19 +4,19 @@ from easydict import EasyDict
 CONF = EasyDict()
 
 # BASE PATH
-CONF.ROOT = "/rhome/dchen/Pointnet2.ScanNet" # TODO change this
-CONF.SCANNET_DIR =  "/canis/Datasets/ScanNet/public/v2/scans" # TODO change this
+CONF.ROOT = r"D:\Pointnet2.ScanNet" # TODO change this
+CONF.SCANNET_DIR =  r"D:\Scannet\scans" # TODO change this
 
 # Uncomment the followings if you're NOT on slurm
-# CONF.SCANNET_FRAMES_ROOT = os.path.join(CONF.ROOT, "frames_square")
-# CONF.PROJECTION = os.path.join(CONF.ROOT, "multiview_projection_pointnet")
-# CONF.ENET_FEATURES_ROOT = os.path.join(CONF.ROOT, "enet_features")
+CONF.SCANNET_FRAMES_ROOT = os.path.join(CONF.ROOT, "frames_square")
+CONF.PROJECTION = os.path.join(CONF.ROOT, "multiview_projection_pointnet")
+CONF.ENET_FEATURES_ROOT = os.path.join(CONF.ROOT, "enet_features")
 
 # Uncomment the followings if you're on slurm
-CONF.CLUSTER = "/cluster/balrog/dchen/Pointnet2.ScanNet"
-CONF.SCANNET_FRAMES_ROOT = os.path.join(CONF.CLUSTER, "frames_square")
-CONF.PROJECTION = os.path.join(CONF.CLUSTER, "multiview_projection_pointnet")
-CONF.ENET_FEATURES_ROOT = os.path.join(CONF.CLUSTER, "enet_features")
+#CONF.CLUSTER = "/cluster/balrog/dchen/Pointnet2.ScanNet"
+#CONF.SCANNET_FRAMES_ROOT = os.path.join(CONF.CLUSTER, "frames_square")
+#CONF.PROJECTION = os.path.join(CONF.CLUSTER, "multiview_projection_pointnet")
+#CONF.ENET_FEATURES_ROOT = os.path.join(CONF.CLUSTER, "enet_features")
 
 CONF.ENET_FEATURES_SUBROOT = os.path.join(CONF.ENET_FEATURES_ROOT, "{}") # scene_id
 CONF.ENET_FEATURES_PATH = os.path.join(CONF.ENET_FEATURES_SUBROOT, "{}.npy") # frame_id
@@ -32,19 +32,19 @@ CONF.MULTIVIEW = os.path.join(CONF.PREP_SCANS, "enet_feats.hdf5")
 
 CONF.SCANNETV2_TRAIN = os.path.join(CONF.ROOT, "data/scannetv2_train.txt")
 CONF.SCANNETV2_VAL = os.path.join(CONF.ROOT, "data/scannetv2_val.txt")
-CONF.SCANNETV2_TEST = os.path.join(CONF.ROOT, "data/scannetv2_test.txt")
-CONF.SCANNETV2_LIST = os.path.join(CONF.ROOT, "data/scannetv2.txt")
-CONF.SCANNETV2_FILE = os.path.join(CONF.PREP_SCANS, "{}.npy") # scene_id
-CONF.SCANNETV2_LABEL = os.path.join(CONF.SCAN_LABELS, "{}.ply") # scene_id
-
-CONF.NYUCLASSES = [
-    'floor', 
-    'wall', 
-    'cabinet', 
-    'bed', 
-    'chair', 
-    'sofa', 
-    'table', 
+CONF.SCANNETV2_TEST = os.path.join(CONF.ROOT, "data/scannetv2_test.txt")   
+CONF.SCANNETV2_LIST = os.path.join(CONF.ROOT, "data/scannetv2.txt")   
+CONF.SCANNETV2_FILE = os.path.join(CONF.PREP_SCANS, "{}.npy") # scene_id   
+CONF.SCANNETV2_LABEL = os.path.join(CONF.SCAN_LABELS, "{}.ply") # scene_id   
+   
+CONF.NYUCLASSES = [   
+    'floor',    
+    'wall',    
+    'cabinet',    
+    'bed',    
+    'chair',    
+    'sofa',    
+    'table',    
     'door', 
     'window', 
     'bookshelf', 
