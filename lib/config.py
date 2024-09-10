@@ -37,7 +37,8 @@ CONF.SCANNETV2_LIST = os.path.join(CONF.ROOT, "data/scannetv2.txt")
 CONF.SCANNETV2_FILE = os.path.join(CONF.PREP_SCANS, "{}.npy") # scene_id   
 CONF.SCANNETV2_LABEL = os.path.join(CONF.SCAN_LABELS, "{}.ply") # scene_id   
    
-CONF.NYUCLASSES = [   
+CONF.NYUCLASSES = [  
+    'person',              # New class
     'floor',    
     'wall',    
     'cabinet',    
@@ -57,7 +58,6 @@ CONF.NYUCLASSES = [
     'shower curtain', 
     'toilet', 
     'sink', 
-    'otherprop',
     'book',               # New class
     'trash can',           # New class
     'box',                 # New class
@@ -69,7 +69,6 @@ CONF.NYUCLASSES = [
     'tv',                  # New class
     'computer tower',      # New class
     'telephone',           # New class
-    'refrigerator',        # Already exists
     'microwave',           # New class
     'laptop',              # New class
     'printer',             # New class
@@ -82,11 +81,9 @@ CONF.NYUCLASSES = [
     'bulletin board',      # New class
     'trash bin',           # New class
     'mouse',               # New class
-    'person',              # New class
     'fire extinguisher',   # New class
     'ladder',              # New class
     'pipe',                # New class
-    'bookshelf',           # Already exists
     'projector screen',    # New class
     'fire alarm',          # New class
     'projector',           # New class
@@ -94,7 +91,8 @@ CONF.NYUCLASSES = [
     'heater',              # New class
     'scanner',             # New class
     'stair',               # New class
-    'car'                  # New class
+    'car',
+    'otherprop',                                    # New class
 ]
 
 # Update the number of classes based on the new list

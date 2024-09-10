@@ -13,6 +13,7 @@ from lib.config import CONF
 CLASS_NAMES = g_label_names
 RAW2SCANNET = g_raw2scannet
 NUM_MAX_PTS = 100000
+print(g_label_names)
 
 def collect_one_scene_data_label(scene_name, out_filename):
     # Over-segmented segments: maps from segment to vertex/point IDs
@@ -61,6 +62,11 @@ def collect_one_scene_data_label(scene_name, out_filename):
         instance_points_list.append(instance_points)
         instance_labels_list.append(np.ones((instance_points.shape[0], 1))*i)   
         label = RAW2SCANNET[labels[i]]
+        if label in CLASS_NAMES:
+            print(f"Class {label} found and mapped to index {CLASS_NAMES.index(label)}")
+        else:
+            print(f"Class {label} not found in CLASS_NAMES, mapping to 'otherprop'")
+
         label = CLASS_NAMES.index(label)
         semantic_labels_list.append(np.ones((instance_points.shape[0], 1))*label)
        

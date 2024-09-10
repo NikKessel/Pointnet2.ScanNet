@@ -12,7 +12,7 @@ sys.path.append(".")
 from lib.config import CONF
 
 class ScannetDataset():
-    def __init__(self, phase, scene_list, num_classes=21, npoints=8192, is_weighting=True, use_multiview=False, use_color=False, use_normal=False):
+    def __init__(self, phase, scene_list, num_classes=52, npoints=8192, is_weighting=True, use_multiview=False, use_color=False, use_normal=False):
         self.phase = phase
         assert phase in ["train", "val", "test"]
         self.scene_list = scene_list

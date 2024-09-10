@@ -147,7 +147,7 @@ id	raw_category	category	count	nyu40id	eigen13id	nyuClass	nyu40class	eigen13clas
 166	fire extinguisher	fire extinguisher	27	40	7	fire extinguisher	otherprop	Objects					n03345837	fire_extinguisher.n.01	misc	40
 122	ladder	ladder	27	39	6	ladder	otherfurniture	Furniture	stairs				n03632277	ladder.n.01	stairs	16
 120	column	column	26	38	7	column	otherstructure	Objects					n03074380	column.n.06	column	24
-107	pipe	pipe	25	40	7	pipe	otherprop	Objects					n03944672	pipe.n.02	misc	40
+107	pipe	pipe	25	40	7	pipe	pipe	pipe					n03944672	pipe.n.02	misc	40
 283	vacuum cleaner	vacuum cleaner	25	40	7		otherprop	Objects					n04517823	vacuum.n.04	objects	39
 88	plate	plate	24	40	7	plate	otherprop	Objects					n03959485	plate.n.04	objects	39
 90	piano	piano	24	39	6	piano	otherfurniture	Furniture	piano		piano	3928116	n03928116	piano.n.01	furniture	36
